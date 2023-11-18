@@ -1,7 +1,11 @@
-export default function Sidebar(){
-    return (
-        <aside className="w-[275px] min-h-screen " >Sidebar
+import Logo from "./logo";
+import Menu from "./menu";
 
-        </aside>
-    )
+export default function Sidebar() {
+  return (
+    <aside className="w-[275px] min-h-screen pr-0.5 ">
+      <Logo />
+      <Menu/>
+    </aside>
+  );
 }
