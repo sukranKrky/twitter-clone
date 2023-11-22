@@ -54,16 +54,31 @@ export default function More() {
           <div className="pr-4 text-xl font-bold">Para Kazanma</div>
 
         </div>
+        <div className="h-px bg-[#2f3336] my-0.5 w-[89%] mx-auto " />
           <Disclosure >
-            <Disclosure.Button className="h-[52px] flex items-center justify-between w-full hover:bg-[#282828] overflow-hidden  rounded-lgtransition-colors px-4 font-bold">
+
+            {({open})=>(
+<>
+
+<Disclosure.Button className="h-[52px]  flex items-center justify-between w-full hover:bg-[#282828] overflow-hidden transition-colors  rounded-lgtransition-colors px-4 font-bold">
               İçerik Üretücüsü Stüdyosu
-              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}>
+              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}
+              className={classNames("transition-all",
+                {"rotate-180 text-[#1d9bf0]" :open}
+              )}
+              
+              >
                 <path
                   fill="currentColor"
                   d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
                 />
               </svg>
             </Disclosure.Button>
+
+
+
+
+            
             <Disclosure.Panel className="text-gray-500">
             <Link to="/"
 											className="flex items-center px-3 h-11 gap-3 font-medium hover:bg-[color:var(--background-secondary)] transition-colors">
@@ -75,13 +90,21 @@ export default function More() {
 									</svg>
 									İstatistikler
 								</Link>
-            </Disclosure.Panel>
+            </Disclosure.Panel></>
+
+            )}
           </Disclosure>
+          
 
           <Disclosure >
+          {({open})=>(
+<>
             <Disclosure.Button className="h-[52px] flex items-center justify-between w-full hover:bg-[#282828] overflow-hidden  rounded-lgtransition-colors px-4 font-bold">
               Personel Araçları
-              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}>
+              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}
+              className={classNames("transition-all",
+              {"rotate-180 text-[#1d9bf0]" :open}
+            )}>
                 <path
                   fill="currentColor"
                   d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
@@ -99,13 +122,20 @@ export default function More() {
 									</svg>
 									Reklamlar
 								</Link>
-            </Disclosure.Panel>
+            </Disclosure.Panel></>
+
+)}
           </Disclosure>
 
-          <Disclosure >
+          <Disclosure > 
+              {({open})=>(
+<>
             <Disclosure.Button className="h-[52px] flex items-center justify-between w-full hover:bg-[#282828] overflow-hidden  rounded-lgtransition-colors px-4 font-bold">
               Ayarlar ve Destek
-              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}>
+              <svg viewBox="0 0 24 24 " width={18.75} height={18.75}
+              className={classNames("transition-all",
+              {"rotate-180 text-[#1d9bf0]" :open}
+            )}>
                 <path
                   fill="currentColor"
                   d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
@@ -154,7 +184,9 @@ export default function More() {
 									</svg>
 									Kılavye Kısayolları
 								</Link>
-            </Disclosure.Panel>
+            </Disclosure.Panel></>
+
+)}
           </Disclosure>
       </Popover.Panel>
     </Popover>
