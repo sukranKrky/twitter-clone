@@ -22,6 +22,8 @@ const routes = createBrowserRouter([
       { path: "list", element: <Lists /> },
       { path: "premium", element: <Premium /> },
       { path: "profile", element: <Profile /> },
+      { path: ":slug", element: <Profile /> },
+
 
 
       { path: "*", element: <NotFaund /> },

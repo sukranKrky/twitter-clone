@@ -1,4 +1,4 @@
-import { Popover, Disclosure } from "@headlessui/react";
+import { Popover, Disclosure, Transition } from "@headlessui/react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export default function More() {
       <Popover.Button className="py-[3px]  block group ">
         <div
           className={classNames(
-            "px-4 rounded-full inline-flex items-center gap-5 group-hover:bg-[#282828] transition-colors"
+            "px-3 h-14  rounded-full inline-flex items-center gap-5 group-hover:bg-[#282828] transition-colors"
           )}
         >
           <div className="w-[26.25px] h-[26.25px] relative">
@@ -22,6 +22,9 @@ export default function More() {
           <div className="pr-4 text-xl">Daha Fazla</div>
         </div>
       </Popover.Button>
+
+    
+
       <Popover.Panel className=" w-[318px] absolute bottom-0 left-0 bg-black shadow-box rounded-xl ">
         <div
           className={classNames(
@@ -189,6 +192,7 @@ export default function More() {
 )}
           </Disclosure>
       </Popover.Panel>
+
     </Popover>
   );
 }

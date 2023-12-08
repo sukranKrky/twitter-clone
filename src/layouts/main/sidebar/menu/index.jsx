@@ -8,7 +8,7 @@ export default function Menu() {
   return (
     <nav className="mt-0.5 mb-1">
       {mainMenü.map((menu, index) => (
-        <NavLink to={menu.path} className="py-2 block group">
+        <NavLink key={index} to={menu.path} className="py-2 block group">
           {({ isActive }) => (
             <div
               className={classNames(
