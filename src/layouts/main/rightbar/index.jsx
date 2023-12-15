@@ -1,7 +1,14 @@
+
+import Premium from "./premium";
+import Search from "./search";
+import Topicks from "./topics";
+
 export default function RigthBar(){
     return(
         <aside className="w-[350px] mr-2.5">
-            Sag Sidebar!
+           <Search/>
+           <Premium/>
+           <Topicks/>
         </aside>
     )
 
