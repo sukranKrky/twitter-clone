@@ -1,4 +1,5 @@
 
+import Footer from "./footer";
 import Premium from "./premium";
 import Search from "./search";
 import Topicks from "./topics";
@@ -11,6 +12,7 @@ export default function RigthBar(){
            <Premium/>
            <Topicks/>
            <WhoFollow/>
+           <Footer/>
         </aside>
     )
 

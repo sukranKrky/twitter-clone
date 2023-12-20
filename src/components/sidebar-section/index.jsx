@@ -14,7 +14,7 @@ export default function SidebarSection({ title, children, more }) {
         {more && (
           <Link
             to={more}
-            className="h-[52px] flex items-center text-[15px] px-4 text-[#1d9bf0] ttransition-colors hover:bg-[#eff3f41a] "
+            className="h-[52px] flex items-center text-[15px] px-4 text-[#1d9bf0] transition-colors hover:bg-[#eff3f41a] "
           >
             Daha fazla göster
           </Link>
