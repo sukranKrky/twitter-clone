@@ -7,7 +7,7 @@ export default function Topic({ item }) {
   return (
     <Link
       to="/"
-      className="py-3  px-4 transition-colors hover:bg-white[0.03]  flex"
+      className="py-3  px-4 transition-colors hover:bg-white[0.03] hover:bg-[#eff3f41a] flex"
     >
       <div className="w-[290px]">
         <div className="text-[13px] text-[#71767b] leading-4 ">
@@ -27,7 +27,7 @@ export default function Topic({ item }) {
       <div className="left-85px">
         <Popover className="relative">
           <Popover.Button
-              className="w-[34.75px] h-[34.75px] outline-none rounded-full relative top-0 right-0 flex items-center justify-center hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] transition-colors  "
+              className="w-[34.75px] h-[34.75px] outline-none rounded-full relative top-0 right-0 flex items-center justify-center hover:bg-[#1d9bf01a]  transition-colors  "
               >
          
               <svg viewBox="0 0 24 24" className="h-[1.172rem]">
@@ -58,6 +58,9 @@ export default function Topic({ item }) {
 					</button>
 				</Popover.Panel>
         </Popover>
+
+
+        
       </div>
     </Link>
   );
