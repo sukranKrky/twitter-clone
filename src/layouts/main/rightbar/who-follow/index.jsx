@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarSection from "../../../../components/sidebar-section";
-import { useAccount } from "../../../../store/hoooks";
+import { useAccount } from "../../../../store/auth/hoooks";
 import { whoFollowUsers } from "../../../../mock";
 import UserCard from "../../../../components/userCard";
 

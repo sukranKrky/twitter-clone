@@ -1,6 +1,7 @@
 import { Popover, Disclosure, Transition } from "@headlessui/react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import { setModal } from "../../../../../store/modal/actions";
 
 export default function More() {
   return (
@@ -145,9 +146,9 @@ export default function More() {
                 />
               </svg>
             </Disclosure.Button>
-            <Disclosure.Panel className="text-gray-500">
+            <Disclosure.Panel className="text-gray-250 text-m">
             <Link to="/"
-											className="flex items-center px-3 h-11 gap-3 font-medium hover:bg-[color:var(--background-secondary)] transition-colors">
+											className="flex items-center px-3 h-11 gap-3 font-medium hover:bg-[color:var(--background-secondary)] transition-colors ">
 									<svg viewBox="0 0 24 24" className="h-[1.172rem]">
 										<path
 											fill="currentColor"
@@ -166,8 +167,9 @@ export default function More() {
 									</svg>
 									Yardım Merkezi
 								</Link>
-                <Link to="/"
-											className="flex items-center px-3 h-11 gap-3 font-medium hover:bg-[color:var(--background-secondary)] transition-colors">
+                <button
+                      onClick={()=>setModal("appearance")}
+											className="flex items-center px-3 h-11 gap-3 font-medium w-full hover:bg-[color:var(--background-secondary)] transition-colors">
 									<svg viewBox="0 0 24 24" className="h-[1.172rem]">
 										<path
 											fill="currentColor"
@@ -176,7 +178,7 @@ export default function More() {
 										/>
 									</svg>
 									Görünüm
-								</Link>
+								</button>
                 <Link to="/"
 											className="flex items-center px-3 h-11 gap-3 font-medium hover:bg-[color:var(--background-secondary)] transition-colors">
 									<svg viewBox="0 0 24 24" className="h-[1.172rem]">

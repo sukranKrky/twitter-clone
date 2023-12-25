@@ -11,7 +11,7 @@ const ref = useRef();
   });
 
   return (
-    <div ref={ref} className=" min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0  bg-black z-[10]">
+    <div ref={ref} className=" min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0  bg-black z-[9]">
       <label className="h-[43px] rounded-full bg-[#202327] w-full relative  group  border border-transparent   focus-within:border-[#1d9bf0] ">
        <div className="w-[55px] h-full flex items-center justify-center  absolute top-0 left-0  pointer-events-none " >
 

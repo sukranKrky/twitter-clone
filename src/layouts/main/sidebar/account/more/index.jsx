@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useAccount, useAccounts } from "../../../../../store/hoooks";
+import { useAccount, useAccounts } from "../../../../../store/auth/hoooks";
 import { setCurrentAccount } from "../../../../../store/auth/actions";
 
 export default function More({ close }) {

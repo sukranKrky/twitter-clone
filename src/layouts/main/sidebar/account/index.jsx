@@ -1,9 +1,9 @@
 import { Popover, Transition } from "@headlessui/react";
-import { useAccount } from "../../../../store/hoooks";
 import More   from "./more";
+import { useAccounts } from "../../../../store/auth/hoooks";
 
 export default function Account() {
-  const account = useAccount();
+  const account = useAccounts();
   return (
     <div className="mt-auto">
       <Popover>
