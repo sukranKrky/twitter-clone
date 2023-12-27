@@ -15,7 +15,7 @@ export default function Account() {
          
             
            
-            <div className=" text-[#71767b] leading-[20px]">
+            <div className=" text-[color:var(--color-base-secondary)] leading-[20px]">
                 @{account.userName}
             </div>
              </div>
@@ -35,7 +35,7 @@ export default function Account() {
             leaveTo="transform opacity-0"
           >
 
-        <Popover.Panel className=" overflow-hidden py-3 absolute bottom-24 w-[300px] -left-40 1 translate-x-1/2  bg-black shadow-box rounded-2xl ">
+        <Popover.Panel className=" overflow-hidden py-3 absolute bottom-24 w-[300px] -left-40 1 translate-x-1/2  bg-[color-var(--background-primary)] shadow-box rounded-2xl ">
             {({close})=>(
 <More close={close} />
   )}

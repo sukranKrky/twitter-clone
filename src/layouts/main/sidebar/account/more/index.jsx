@@ -25,7 +25,7 @@ export default function More({ close }) {
           <div className="mx-3 text-[15px]">
             <h6 className="font-bold leading-[20px]">{account.fullName} </h6>
 
-            <div className=" text-[#71767b] leading-[20px]">
+            <div className=" text-[color:var(--color-base-secondary)] leading-[20px]">
               @{account.userName}
             </div>
           </div>
@@ -41,13 +41,13 @@ export default function More({ close }) {
         </button>
       ))}
       <div className="h-px bg-[#2f3336] my-3" />
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
         Var olan bir hesap ekle
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
         Hesapları yönet
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
         <div className="max-w-[228px">@Crazy_Lama hesabından çıkış yap</div>
 
         {/* {accounts.map(account=>{

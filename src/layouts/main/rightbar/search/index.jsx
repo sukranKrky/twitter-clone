@@ -11,13 +11,13 @@ const ref = useRef();
   });
 
   return (
-    <div ref={ref} className=" min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0  bg-black z-[9]">
-      <label className="h-[43px] rounded-full bg-[#202327] w-full relative  group  border border-transparent   focus-within:border-[#1d9bf0] ">
+    <div ref={ref} className=" min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0  bg-[color:var(--background-primary)] z-[9]">
+      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full relative  group  border border-transparent focus-within:bg-[color:var(--background-primary)]  focus-within:border-[#1d9bf0] ">
        <div className="w-[55px] h-full flex items-center justify-center  absolute top-0 left-0  pointer-events-none " >
 
        <svg
           viewBox="0 0 24 24" height={18.75} 
-          className=" min-w-[32px] text-[#71767b]  absolutepl-[12px] w-full relative h-5 "
+          className=" min-w-[32px] text-[color:var(--color-base-secondary)]  absolutepl-[12px] w-full relative h-5 group-focus-with:text-[color:var(--color-primary)]  "
          >
           
             <path
@@ -42,7 +42,7 @@ const ref = useRef();
         
         <button 
         onClick={()=>setQuery('')}
-        className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0]  flex items-center justify-center text-black min-w-[22px] absolute top-[40%] translate-1/2 -translate-y-1/3 right-3  " >
+        className="w-[22px] h-[22px] rounded-full bg-[color:var(--color-primary)]  flex items-center justify-center text-black min-w-[22px] absolute top-[40%] translate-1/2 -translate-y-1/3 right-3  " >
         <svg viewBox="0 0 15 15" width={10} height={10}>
 								<path
 									fill="currentColor"
@@ -54,9 +54,9 @@ const ref = useRef();
      }
 
 {focus &&(
-  <div className="absolude w-[350px] -left-px translate-y-px bg-black shadow-box max-h-[calc(88vh-53px)] rounded-lg text-center min-h-[100px] " >
+  <div className="absolude w-[350px] -left-px translate-y-px bg-[color:var(--background-primary)] shadow-box max-h-[calc(88vh-53px)] rounded-lg text-center min-h-[100px] " >
 
-    <p className=" p-3 pt-5 text-[#71767b] leading-5  ">
+    <p className=" p-3 pt-5 text-[color:var(--color-base-secondary)] leading-5  ">
     Kişileri,listeleri veya anahtar kelimeleri aramayı dene
     </p>
   </div>
