@@ -24,11 +24,11 @@ document.documentElement.style.setProperty('--color-base',appearance.color.base)
 document.documentElement.style.setProperty("--color-base-secondary",appearance.color.baseSecondary)
 
 document.documentElement.style.setProperty('--font-size',appearance.fontSize+"px")
-document.documentElement.style.setProperty("--box-shadow",appearance.color.boxShadow)
+document.documentElement.style.setProperty('--box-shadow', appearance.boxShadow)
 
 
 
- console.log("appearance :" ,appearance);
+//  console.log("appearance :" ,appearance);
 }, [appearance])
 
     return(

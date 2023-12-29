@@ -46,6 +46,7 @@ export default function Footer() {
         className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline  "
       >
         Reklam Bilgisi
+
       </Link>
       <div className="w-full flex gap-2">
         <Popover className="relative inline-flex leading-4 ">
@@ -55,25 +56,25 @@ export default function Footer() {
           <Popover.Panel className="w-[150px] max-w-[384px] bg-[color:var(--background-primary)] shadow-box rounded-xl absolute bottom-0 -right-8 grid overflow-hidden">
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
+              className="py-3 px-4 text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               Hakkında
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
+              className="py-3 px-4 text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               Duru
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
+              className="py-3 px-4 text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               İşletmeler için x
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
+              className="py-3 px-4 text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               Geliştiriciler
             </Link>

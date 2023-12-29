@@ -5,9 +5,8 @@ import { setCurrentAccount } from "../../../../../store/auth/actions";
 export default function More({ close }) {
   const currentAccount = useAccount();
   const accounts = useAccounts();
-  console.log(currentAccount.id);
   return (
-    <div>
+    <div className="bg-[color:var(--background-primary)]">
       {accounts.map((account) => (
         <button
           type="button"
@@ -16,7 +15,7 @@ export default function More({ close }) {
           className={classNames(
             "py-3 px-4 flex text-left   w-full transition-colors",
             {
-              "hover:bg-[#eff3f41a]": currentAccount.id !== account.id,
+              "hover:bg-[color:var(--background-secondary)]": currentAccount.id !== account.id,
             }
           )}
         >
@@ -37,17 +36,18 @@ export default function More({ close }) {
             >
               <path d="M12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-.81 14.68l-4.1-3.27 1.25-1.57 2.47 1.98 3.97-5.47 1.62 1.18-5.21 7.15z" />
             </svg>
+
           )}
         </button>
       ))}
       <div className="h-px bg-[#2f3336] my-3" />
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
         Var olan bir hesap ekle
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
         Hesapları yönet
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[#eff3f41a] w-full  text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
         <div className="max-w-[228px">@Crazy_Lama hesabından çıkış yap</div>
 
         {/* {accounts.map(account=>{
