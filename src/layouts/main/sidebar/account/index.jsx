@@ -8,9 +8,9 @@ export default function Account() {
     <div className="mt-auto">
       <Popover>
         <Popover.Button className="my-3 p-3  w-full  rounded-full flex text-left  hover:bg-[#eff3f41a] outline-none">
-          <img src={account.avatar} alt="" className="w-10 h-10 rounded-full" />
+          <img src={account.avatar} alt="" className="w-10 h-10 flex-shrink-0 rounded-full" />
 
-          <div className="mx-3 text-[15px]"> 
+          <div className="mx-3 "> 
           <h6 className="font-bold leading-[20px]">{account.fullName} </h6>
          
             

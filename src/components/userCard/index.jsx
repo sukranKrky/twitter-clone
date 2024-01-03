@@ -12,8 +12,8 @@ export default function UserCard({ user }) {
         alt=""
       />
 
-      <div className="flex-1 flex flex-col text-left">
-        <div className="text-[15px]  leading-5 font-bold flex items-center ">
+      <div className="w-[calc(100%-3.25rem)] text-left">
+        <div className="leading-5 font-bold truncate">
           {user.fullName}
           {user?.verified == "true" && (
             <svg
@@ -29,7 +29,7 @@ export default function UserCard({ user }) {
             </svg>
           )}
         </div>
-        <div className="text-[15px] text-[color:var(--color-base-secondary)] ">@{user.userName}</div>
+        <div className=" text-[color:var(--color-base-secondary)] ">@{user.userName}</div>
       </div>
 
       <div>

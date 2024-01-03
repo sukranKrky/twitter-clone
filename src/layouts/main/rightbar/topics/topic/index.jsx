@@ -10,16 +10,16 @@ export default function Topic({ item }) {
       className="py-3  px-4 transition-colors hover:bg-white[0.03] hover:bg-[#eff3f41a] flex"
     >
       <div className="w-[290px]">
-        <div className="text-[13px] text-[color:var(--color-base-secondary)] leading-4 ">
+        <div className="text-[0.813rem] text-[color:var(--color-base-secondary)] leading-4 ">
           {item.title}
         </div>
-        <div className="text-[15px] font-bold leading-5 mt-0.5 ">
+        <div className=" font-bold leading-5 mt-0.5 ">
           {item.topic.type === "tag" && "#"}
           {item.topic.value}
         </div>
 
         {item?.postCount && (
-          <div className="text-[13px] text-[color:var(--color-base-secondary)]  mt-1 leading-4 ">
+          <div className="text-[0.813rem] text-[color:var(--color-base-secondary)]  mt-1 leading-4 ">
             {numberFormat(item.postCount)}
           </div>
         )}

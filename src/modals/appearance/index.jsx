@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppearance } from "../../store/appearance/hoooks";
 import classNames from "classnames";
@@ -6,19 +6,36 @@ import {
   setBackgroundColor,
   setBoxShadow,
   setColor,
+  setFontSize,
 } from "../../store/appearance/actions";
-import { colors } from "../../utils/consts";
+import { colors, fontSizes } from "../../utils/consts";
 import Button from "../../components/button";
 
 export default function AppearanceModal({ close }) {
-  const { backgroundColor, color } = useAppearance();
+  const { backgroundColor, color, fontSize } = useAppearance();
+
+  const [fontSizePercent, setFontSizePercent] = useState(0);
+
+  useEffect(
+    () => {
+      setTimeout(
+        setFontSizePercent(
+          document.querySelector(".active-font-size").offsetLeft + 3
+        ),
+        1
+      );
+    },
+    { fontSize }
+  );
+  console.log(fontSizePercent);
+
   return (
     <div className=" w-[600px]">
-      <h3 className="my-8 mb-3  text-[32px] leading-7 font-extrabold text-center ">
+      <h3 className="my-8 mb-3  text-[1.438rem] leading-7 font-extrabold text-center ">
         Görünümü özelleştir
       </h3>
       <div className="p-8 pt-0">
-        <p className="text-center text-[color:var(--color-base-secondary)] leading-5 text[15px] mb-5 ">
+        <p className="text-center text-[color:var(--color-base-secondary)] leading-5 text[0.938rem] mb-5 ">
           Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
         </p>
         <div className="mx-8 mb-4 gap-3">
@@ -29,7 +46,7 @@ export default function AppearanceModal({ close }) {
               className="w-10 h-10 rounded-full object-cover"
             />
             <div className="flex-1 flex flex-col  ">
-              <header className="mb-0.5 leading-5 text-[15px] fkex items-center  ">
+              <header className="mb-0.5 leading-5  flex items-center  ">
                 <div className="font-bold flex items-center">
                   X
                   <svg
@@ -62,9 +79,41 @@ export default function AppearanceModal({ close }) {
             Yazı Tipi Boyutu
           </h6>
           <div className="bg-[color:var(--background-secondary)] p-4 rounded-2xl flex items-center gap-5 ">
-            <div className="text-[13px]">Aa</div>
-            <div className="h-1 bg-[color:var(--color-secondary)] flex-1  "></div>
-            <div className="text-[20px]">Aa</div>
+            <div className="text-[0.813rem]">Aa</div>
+            <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full  relative ">
+              <div
+                style={{ width: fontSizePercent }}
+                className="absolute h-full top-0 left-0 rounded-full bg-[color:var(--color-primary)]"
+              />
+              <div className="flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]">
+                {fontSizes.map((fs) => (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      setFontSize(fs);
+                      setFontSizePercent(e.currentTarget.offsetLeft + 3);
+                    }}
+                    className={classNames(
+                      "before:absolute before:inset-0 before:rounded-full before:hover:bg-[color:var(--color-primary)] before:opacity-10 w-8 h-8 rounded-full flex items-center justify-center relative",
+                      {
+                        "active-font-size": fs === fontSize,
+                      }
+                    )}
+                  >
+                    <div
+                      className={classNames(
+                        "w-3 h-3 rounded-full bg-[color:var(--color-secondary)]",
+                        {
+                          "w-4 h-4": fs === fontSize,
+                          "!bg-[color:var(--color-primary)]": fs <= fontSize,
+                        }
+                      )}
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="text-[1.25rem]">Aa</div>
           </div>
         </section>
 
@@ -121,9 +170,9 @@ export default function AppearanceModal({ close }) {
                 );
             }}
             className={classNames(
-              "h-16 pr-3 pl-2 bg-white font-bold text-[#0f1419] border  boreder-2  rounded flex items-center justify-center group ",
+              "h-[62px] pr-3 pl-2 bg-white font-bold text-[#0f1419] border  boreder-[2px]  rounded flex items-center justify-center group ",
               {
-                "!border-[color:var(--color-primary)] !border-2 ":
+                "!border-[color:var(--color-primary)] !border-[2px] ":
                   backgroundColor.name === "light",
               }
             )}
@@ -131,7 +180,7 @@ export default function AppearanceModal({ close }) {
             <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-black/10 flex items-center justify-center ">
               <div
                 className={classNames(
-                  "h-5 w-5 rounded-full border-black/40  border-2",
+                  "h-5 w-5 rounded-full border-black/40  border-[2px]",
                   {
                     "!border-[color:var(--color-primary)  !bg-[color:var(--color-primary)] text-white":
                       backgroundColor.name === "light",
@@ -148,7 +197,7 @@ export default function AppearanceModal({ close }) {
                 )}
               </div>
             </div>
-            Varsayılan
+            <div className="truncate">Varsayılan</div>
           </button>
 
           <button
@@ -170,17 +219,17 @@ export default function AppearanceModal({ close }) {
                 );
             }}
             className={classNames(
-              "h-16 pr-3 pl-2 bg-[#15202b] font-bold text-[#f7f9f9] border border-[#5c6e7e] boreder-2  rounded  flex items-center justify-center group ",
+              "h-[62px] pr-3 pl-2 bg-[#15202b] font-bold text-[#f7f9f9] border border-[#5c6e7e] boreder-2  rounded  flex items-center justify-center group ",
               {
-                "!border-[color:var(--color-primary)] !border-2":
+                "!border-[color:var(--color-primary)] !border-[2px]":
                   backgroundColor.name === "dark",
               }
             )}
           >
-            <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-white/10 flex items-center justify-center ">
+            <div className="w-[40px] h-[40px] rounded-full flex-shrink-0 group-hover:bg-white/10 flex items-center justify-center ">
               <div
                 className={classNames(
-                  "h-5 w-5 rounded-full border-white/20  border-2",
+                  "h-[20px] w-[20px] rounded-full border-white/20  border-[2px]",
                   {
                     "!border-[color:var(--color-primary)  !bg-[color:var(--color-primary)] text-white":
                       backgroundColor.name === "dark",
@@ -197,7 +246,7 @@ export default function AppearanceModal({ close }) {
                 )}
               </div>
             </div>
-            Loş
+            <div className="truncate">Loş</div>
           </button>
 
           <button
@@ -219,17 +268,17 @@ export default function AppearanceModal({ close }) {
                 );
             }}
             className={classNames(
-              "h-16 pr-3 pl-2 bg-black font-bold text-[#f7f9f9] border border-white/0  rounded  group flex items-center gap-1.5 ",
+              "h-[62px] pr-3 pl-2 bg-black font-bold text-[#f7f9f9] border border-white/0  rounded  group flex items-center gap-1.5 ",
               {
-                "!border-[color:var(--color-secondary)] !border-2":
+                "!border-[color:var(--color-secondary)] !border-[]2px":
                   backgroundColor.name === "darker",
               }
             )}
           >
-            <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-white/10 flex items-center justify-center ">
+            <div className="w-[40px] h-[40px] rounded-full flex-shrink-0 group-hover:bg-white/10 flex items-center justify-center ">
               <div
                 className={classNames(
-                  "h-5 w-5 rounded-full border-white/20  border-2",
+                  "h-[20px] w-[20px] rounded-full border-white/20  border-[2px]",
                   {
                     "!border-[color:var(--color-primary)  !bg-[color:var(--color-primary)] text-white":
                       backgroundColor.name === "darker",
@@ -246,11 +295,11 @@ export default function AppearanceModal({ close }) {
                 )}
               </div>
             </div>
-            Işık Kapalı
+            <div className="truncate">Işık Kapalı</div>
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pt-4">
         <Button onClick={close}>Bitti</Button>
       </div>
     </div>

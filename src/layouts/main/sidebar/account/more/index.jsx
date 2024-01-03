@@ -21,8 +21,8 @@ export default function More({ close }) {
         >
           <img src={account.avatar} alt="" className="w-10 h-10 rounded-full" />
 
-          <div className="mx-3 text-[15px]">
-            <h6 className="font-bold leading-[20px]">{account.fullName} </h6>
+          <div className="mx-3 ">
+            <h6 className="font-bold leading-[1.25rem]">{account.fullName} </h6>
 
             <div className=" text-[color:var(--color-base-secondary)] leading-[20px]">
               @{account.userName}
@@ -41,14 +41,14 @@ export default function More({ close }) {
         </button>
       ))}
       <div className="h-px bg-[#2f3336] my-3" />
-      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full   font-black leading-[1.25rem]">
         Var olan bir hesap ekle
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full   font-black leading-[1.25rem]">
         Hesapları yönet
       </button>
-      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full  text-[15px] font-black leading-[20px]">
-        <div className="max-w-[228px">@Crazy_Lama hesabından çıkış yap</div>
+      <button className="py-3 px-4 text-left transition-color hover:bg-[color:var(--background-secondary)] w-full   font-black leading-[1.25rem]">
+        <div className="max-w-[228px">@{currentAccount.userName} hesabından çıkış yap</div>
 
         {/* {accounts.map(account=>{
        <p> {account.useName}hesabından çikiş yap</p> 

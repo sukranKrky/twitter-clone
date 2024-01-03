@@ -8,7 +8,7 @@ export default function Menu() {
   return (
     <nav className="mt-0.5 mb-1">
       {mainMenü.map((menu, index) => (
-        <NavLink key={index} to={menu.path} className="py-2 block group">
+        <NavLink key={index} to={menu.path} className="py-[0.188rem] block group">
           {({ isActive }) => (
             <div
               className={classNames(
@@ -16,9 +16,9 @@ export default function Menu() {
                 { "font-bold": isActive }
               )}
             >
-              <div className="w-[26.25px] h-[26.25px] relative">
+              <div className="w-[1.641rem] h-[1.641rem]  relative">
                 {menu?.notification && (
-                  <span className=" w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[color:var(--background-primary)] text-[11px] ">
+                  <span className=" w-[1.125rem] h-[1.125rem] rounded-full bg-[color:var(--color-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[color:var(--background-primary)] text-[0.688rem] ">
                     {menu?.notification}
                   </span>
                 )}

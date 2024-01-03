@@ -11,13 +11,13 @@ const ref = useRef();
   });
 
   return (
-    <div ref={ref} className=" min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0  bg-[color:var(--background-primary)] z-[9]">
-      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full relative  group  border border-transparent focus-within:bg-[color:var(--background-primary)]  focus-within:border-[#1d9bf0] ">
-       <div className="w-[55px] h-full flex items-center justify-center  absolute top-0 left-0  pointer-events-none " >
+    <div ref={ref} className=" min-h-[2rem] h-[3.313rem] mb-3 flex items-center  sticky top-0  bg-[color:var(--background-primary)] z-[9]">
+      <label className="h-[2.688rem] rounded-full bg-[color:var(--background-third)] w-full relative  group  border border-transparent focus-within:bg-[color:var(--background-primary)]  focus-within:border-[#1d9bf0] ">
+       <div className="w-[3.5rem] h-full flex items-center justify-center  absolute top-0 left-0  pointer-events-none " >
 
        <svg
           viewBox="0 0 24 24" height={18.75} 
-          className=" min-w-[32px] text-[color:var(--color-base-secondary)]  absolutepl-[12px] w-full relative h-5 group-focus-with:text-[color:var(--color-primary)]  "
+          className="h-[1.172rem]  min-w-[2rem] text-[color:var(--color-base-secondary)]  absolutepl-[12px] w-full relative  group-focus-with:text-[color:var(--color-primary)]  "
          >
           
             <path
@@ -28,7 +28,7 @@ const ref = useRef();
        </div>
        <input type="text"
        placeholder="Ara"
-        className="w-full h-full bg-transparent placeholder:[#71767b] rounded-full autline-none pl-[56px] text-[15px] " 
+        className="w-full h-full bg-transparent placeholder:[#71767b] rounded-full autline-none pl-[3.5rem]" 
         value={query}
         onFocus={()=>setFocus(true)}
         onBlur={()=>setFocus(false)}

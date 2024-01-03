@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 export default function MainLayouts(){
 const modal=useModal()
-// console.log("modallllMain LLayout",modal);
+// console.log("modallllMain Layout",modal);
 
 const appearance=useAppearance()
 useEffect(() => {
@@ -23,7 +23,7 @@ document.documentElement.style.setProperty('--color-secondary',appearance.color.
 document.documentElement.style.setProperty('--color-base',appearance.color.base)
 document.documentElement.style.setProperty("--color-base-secondary",appearance.color.baseSecondary)
 
-document.documentElement.style.setProperty('--font-size',appearance.fontSize+"px")
+document.documentElement.style.setProperty('--font-size', appearance.fontSize + 'px')
 document.documentElement.style.setProperty('--box-shadow', appearance.boxShadow)
 
 
