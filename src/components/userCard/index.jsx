@@ -18,8 +18,6 @@ export default function UserCard({ user }) {
           {user?.verified == "true" && (
             <svg
               viewBox="0 0 22 22"
-              width={18.75}
-              height={18.75}
               class="text-[#1d9bf0] ml-0.5 h-[1.172rem]"
             >
               <path
@@ -32,7 +30,7 @@ export default function UserCard({ user }) {
         <div className=" text-[color:var(--color-base-secondary)] ">@{user.userName}</div>
       </div>
 
-      <div>
+      <div className="">
       {following ? (
 					<Button
 						variant="white-outline"
