@@ -16,7 +16,7 @@ document.documentElement.style.setProperty('--background-primary',appearance.bac
 document.documentElement.style.setProperty('--background-secondary',appearance.backgroundColor.secondary)
 document.documentElement.style.setProperty('--background-third',appearance.backgroundColor.third)
 document.documentElement.style.setProperty('--background-modal',appearance.backgroundColor.modal)
-document.documentElement.style.setProperty('--background-primary-alpha',appearance.backgroundColor.primaryApha)
+document.documentElement.style.setProperty('--background-primary-alpha',appearance.backgroundColor+"a6")
 
 
 

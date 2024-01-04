@@ -1,7 +1,7 @@
 import Items from "./items";
 import Item from "./item";
 import Content from "./content";
-import { Children, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import { TabContext } from "./context";
 import StickyHeader from "../sticky-header";
@@ -23,7 +23,6 @@ export default function Tab({ children, activeTab }) {
     setActive,
   };
 
-  console.log("children: ", Children);
 
   return (
     <TabContext.Provider value={data}>
