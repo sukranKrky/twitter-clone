@@ -6,7 +6,7 @@ export default function More({ close }) {
   const currentAccount = useAccount();
   const accounts = useAccounts();
   return (
-    <div className="bg-[color:var(--background-primary)]">
+    <div className="bg-[color:var(--background-primary)]   ">
       {accounts.map((account) => (
         <button
           type="button"

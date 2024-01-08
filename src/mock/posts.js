@@ -4,6 +4,9 @@ export const posts = [
     type: "poll",
     content: `PROTOTURK'un paylaştığı videoları seviyor musunuz?
 Bu anket ders esnasında sorulmuştur.`,
+    type: "poll",
+    content: `PROTOTURK'un paylaştığı videoları seviyor musunuz?
+Bu anket ders esnasında sorulmuştur.`,
     poll: {
       voted: false,
       votes: 12,

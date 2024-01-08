@@ -1,5 +1,8 @@
 import React from "react";
 import { numberFormat } from "../../utils/formats";
+import { posts } from "../../mock/posts";
+import Photo from "./photo";
+import Poll from "./poll";
 
 export default function Post({ post }) {
   return (
@@ -9,7 +12,7 @@ export default function Post({ post }) {
         alt=""
         className="w-10 h-10 rounded-full object-cover "
       />
-      <div className="flex-1">
+      <div className="flex-1 ">
         <header className="leadhinh-5 flex items-center  gap-2 mb-0.5">
           <div className="leadhinh-5">
             <a href="#" className="hover:underline flex items-center font-bold">
@@ -34,9 +37,14 @@ export default function Post({ post }) {
             <div className="x">17s</div>
           </div>
         </header>
-        <div>
+        <div className="" >
             <div dangerouslySetInnerHTML={{__html: post.content.replace(/\n/g,'<br/>')}} />
+		{post.type ==="photo" && <Photo photos={post.photos} />}
+
+		{post.type==="poll" && <Poll poll={post.poll}/>}
+
         </div>
+
 
         <div className="flex -ml-1.5 mt-1.5">
             <div className="flex-1 group flex items-center gap-px ">
